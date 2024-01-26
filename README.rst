@@ -1,3 +1,29 @@
+=========
+Pyinstaller
+=========
+安裝 python 環境
+    https://www.python.org/downloads/
+
+安裝 pyinstaller::
+    
+    pip install pyinstaller
+
+修正 __main__.py import 路徑為絕對路徑::
+
+    from mdict_utils import about
+    from mdict_utils import reader
+    from mdict_utils.writer import pack, pack_mdd_file, etc.
+    from mdict_utils.utils import ElapsedTimer
+
+
+切換到 mdict-utils 目錄下，開啟 power shell 並執行::
+    
+    pyinstaller.exe -F -n runme .\__main__.py
+
+mdic_utils 目錄下會多出 build, dist 目錄，打包好的 exe 位於 dist 目錄下。使用語法範例::
+
+    .\runme.exe -x ./test.mdx -d ./
+
 ==========
 MDict Tool
 ==========
