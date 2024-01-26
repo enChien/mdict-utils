@@ -9,7 +9,7 @@ Pyinstaller
     
     pip install pyinstaller
 
-修正 __main__.py import 路徑為絕對路徑::
+修正 __main__.py import 路徑必須為絕對路徑，否則 pyinstaller 打包會出錯::
 
     from mdict_utils import about
     from mdict_utils import reader
